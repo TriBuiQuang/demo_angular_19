@@ -1,0 +1,12 @@
+<p>
+	Experimental Zoneless Change Detection: Angular historically relied on
+	zone.js for change detection, which had certain performance drawbacks. In
+	Angular 18, experimental support for zoneless change detection was
+	introduced. This allows developers to remove zone.js from their projects,
+	potentially leading to faster initial renders, improved runtime performance,
+	smaller bundle sizes, and more straightforward debugging. To enable this, add
+	provideExperimentalZonelessChangeDetection to your application bootstrap and
+	remove zone.js from your polyfills. BLOG.ANGULAR.DEV
+</p>
+
+<pre [textContent]="codeZoneLess"></pre>
