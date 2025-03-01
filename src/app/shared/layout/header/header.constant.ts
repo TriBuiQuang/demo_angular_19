@@ -12,11 +12,6 @@ export const HEADER_ITEMS = [
 				icon: 'pi pi-bolt',
 				link: '/17/',
 			},
-			{
-				label: 'version 17',
-				icon: 'pi pi-bolt',
-				link: '/control-flows/version_17',
-			},
 		],
 	},
 	{
@@ -28,9 +23,24 @@ export const HEADER_ITEMS = [
 				link: '/18/',
 			},
 			{
-				label: 'version 17',
+				label: 'Experimental Zoneless Change Detection',
 				icon: 'pi pi-bolt',
-				link: '/control-flows/version_17',
+				link: '/18/zoneless_change_detection',
+			},
+			{
+				label: 'Stable Material 3 Components',
+				icon: 'pi pi-bolt',
+				link: '/18/stable_material_3_components',
+			},
+			{
+				label: 'Deferrable Views and Built-in Control Flow',
+				icon: 'pi pi-bolt',
+				link: '/18/deferrable_view_build_in_control_flow',
+			},
+			{
+				label: 'Introduction of &#64;let Syntax',
+				icon: 'pi pi-bolt',
+				link: '/18/let_syntax',
 			},
 		],
 	},
@@ -40,12 +50,32 @@ export const HEADER_ITEMS = [
 			{
 				label: 'Introduce',
 				icon: 'pi pi-bolt',
-				link: '/18/',
+				link: '/19/',
 			},
 			{
 				label: 'Incremental Hydration',
 				icon: 'pi pi-bolt',
-				link: '/18/incremental_hydration',
+				link: '/19/incremental_hydration',
+			},
+			{
+				label: 'Standalone Components by Default',
+				icon: 'pi pi-bolt',
+				link: '/19/standalone_components_by_default',
+			},
+			{
+				label: 'Event Replay Enabled by Default',
+				icon: 'pi pi-bolt',
+				link: '/19/event_replay_enabled_by_default',
+			},
+			{
+				label: 'Event Replay Enabled by Default',
+				icon: 'pi pi-bolt',
+				link: '/18/event_replay_enabled_by_default',
+			},
+			{
+				label: 'Standalone Components by Default',
+				icon: 'pi pi-bolt',
+				link: '/18/standalone_components_by_default',
 			},
 		],
 	},
@@ -88,10 +118,5 @@ export const HEADER_ITEMS = [
 				],
 			},
 		],
-	},
-	{
-		label: 'Contact',
-		icon: 'pi pi-envelope',
-		badge: '3',
 	},
 ];
