@@ -13,6 +13,7 @@ import { HEADER_ITEMS } from './header.constant';
 @Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
+	styleUrls: ['./header.component.scss'],
 	imports: [Menubar, BadgeModule, AvatarModule, InputTextModule, RippleModule, CommonModule, RouterLink],
 })
 export class HeaderComponent implements OnInit {
@@ -22,23 +23,4 @@ export class HeaderComponent implements OnInit {
 		this.items = HEADER_ITEMS;
 		console.log('this. in hdaer');
 	}
-
-	// ngOnInit() {
-	// 	this.items = [
-	// 		{
-	// 			label: 'Router',
-	// 			icon: 'pi pi-palette',
-	// 			items: [
-	// 				{
-	// 					label: 'Installation',
-	// 					route: '/installation',
-	// 				},
-	// 				{
-	// 					label: 'Configuration',
-	// 					route: '/configuration',
-	// 				},
-	// 			],
-	// 		},
-	// 	];
-	// }
 }

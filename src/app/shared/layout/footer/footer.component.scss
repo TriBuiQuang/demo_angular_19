@@ -1,0 +1,11 @@
+@import "assets/scss/_variables.scss";
+
+footer {
+	background-color: $sky;
+	position: fixed;
+	bottom: 0;
+	justify-items: center;
+	width: 100%;
+	min-height: 50px;
+	padding: 20px 10px;
+}

@@ -1,0 +1,9 @@
+@import "assets/scss/_variables.scss";
+@import "assets/scss/_variables.scss";
+:host ::ng-deep header.header {
+	background: $sky;
+	margin-bottom: 10px;
+	.p-menubar {
+		background: $sky;
+	}
+}

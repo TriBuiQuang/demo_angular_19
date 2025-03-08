@@ -9,7 +9,7 @@ export const routes: Routes = [
 		path: '17',
 		children: [
 			{
-				path: 'introduce',
+				path: '',
 				loadComponent: () =>
 					import('./features/17/introduce/introduce.component').then((m) => m.IntroduceComponent),
 			},
@@ -19,7 +19,7 @@ export const routes: Routes = [
 		path: '18',
 		children: [
 			{
-				path: 'introduce',
+				path: '',
 				loadComponent: () =>
 					import('./features/18/introduce/introduce.component').then((m) => m.IntroduceComponent),
 			},
@@ -29,7 +29,7 @@ export const routes: Routes = [
 		path: '19',
 		children: [
 			{
-				path: 'introduce',
+				path: '',
 				loadComponent: () =>
 					import('./features/19/introduce/introduce.component').then((m) => m.IntroduceComponent),
 			},

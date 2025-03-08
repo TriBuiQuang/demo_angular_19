@@ -12,13 +12,14 @@ export const appConfig: ApplicationConfig = {
 		provideZoneChangeDetection({ eventCoalescing: true }),
 		provideRouter(routes),
 		// this will enable Incremental Hydration
-		// provideClientHydration(withIncrementalHydration()),
-		provideClientHydration(withEventReplay()),
+		// provideClientHydration(withIncrementalHydration()), // 🔥 Kích hoạt Hydration từng phần
+		provideClientHydration(withEventReplay()), // 🔥 Kích hoạt Hydration giữ lại sự kiện
 		provideAnimationsAsync(),
 		providePrimeNG({
 			theme: {
 				preset: Aura,
 			},
+			ripple: true,
 		}),
 	],
 };

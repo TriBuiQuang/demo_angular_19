@@ -1,0 +1,13 @@
+@import "assets/scss/_variables.scss";
+
+::ng-deep * {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+div.container {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 20px;
+}
