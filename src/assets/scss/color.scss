@@ -1,0 +1,66 @@
+:host ::ng-deep {
+	.bg {
+		&-blue {
+			background-color: $blue;
+		}
+		&-indigo {
+			background-color: $indigo;
+		}
+		&-purple {
+			background-color: $purple;
+		}
+		&-pink {
+			background-color: $pink;
+		}
+		&-orange {
+			background-color: $orange;
+		}
+		&-yellow {
+			background-color: $yellow;
+		}
+		&-green {
+			background-color: $green;
+		}
+		&-teal {
+			background-color: $teal;
+		}
+		&-cyan {
+			background-color: $cyan;
+		}
+		&-sky {
+			background-color: $sky;
+		}
+	}
+	.text {
+		&-blue {
+			color: $blue;
+		}
+		&-indigo {
+			color: $indigo;
+		}
+		&-purple {
+			color: $purple;
+		}
+		&-pink {
+			color: $pink;
+		}
+		&-orange {
+			color: $orange;
+		}
+		&-yellow {
+			color: $yellow;
+		}
+		&-green {
+			color: $green;
+		}
+		&-teal {
+			color: $teal;
+		}
+		&-cyan {
+			color: $cyan;
+		}
+		&-sky {
+			color: $sky;
+		}
+	}
+}

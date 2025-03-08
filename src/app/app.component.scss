@@ -1,4 +1,4 @@
-@import "assets/scss/_variables.scss";
+@import "assets/scss/index.scss";
 
 ::ng-deep * {
 	box-sizing: border-box;
@@ -10,4 +10,31 @@ div.container {
 	display: flex;
 	flex-direction: column;
 	padding: 10px 20px;
+}
+
+:host ::ng-deep {
+	.introduce {
+		p {
+			line-height: 20px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		p-fieldset {
+			padding: 10px;
+			margin-left: 10px;
+			.p-fieldset-legend {
+				background-color: $purple-400;
+			}
+			.p-fieldset {
+				margin: 0 40px;
+			}
+		}
+
+		.title-theme__h2 {
+			font-size: 40px;
+			color: $red;
+		}
+	}
 }
