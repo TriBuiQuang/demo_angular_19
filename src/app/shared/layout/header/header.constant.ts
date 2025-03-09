@@ -12,6 +12,26 @@ export const HEADER_ITEMS = [
 				icon: 'pi pi-bolt',
 				link: '/17/',
 			},
+			{
+				label: 'Built-in Control Flow Syntax',
+				icon: 'pi pi-bolt',
+				link: '/17/built_in_control_flow_syntax',
+			},
+			{
+				label: 'Performance Enhancements ',
+				icon: 'pi pi-bolt',
+				link: '/17/performance_enhancements',
+			},
+			{
+				label: 'Deferrable Views for Optimized Loading',
+				icon: 'pi pi-bolt',
+				link: '/17/deferrable_views',
+			},
+			{
+				label: 'Enhanced Server-Side Rendering (SSR) Support',
+				icon: 'pi pi-bolt',
+				link: '/17/enhanced_server_side',
+			},
 		],
 	},
 	{
@@ -30,12 +50,12 @@ export const HEADER_ITEMS = [
 			{
 				label: 'Stable Material 3 Components',
 				icon: 'pi pi-bolt',
-				link: '/18/stable_material_3_components',
+				link: '/18/stable_material_component',
 			},
 			{
 				label: 'Deferrable Views and Built-in Control Flow',
 				icon: 'pi pi-bolt',
-				link: '/18/deferrable_view_build_in_control_flow',
+				link: '/18/deferrable_views_and_built_in_control_flow',
 			},
 			{
 				label: 'Introduction of &#64;let Syntax',
