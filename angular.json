@@ -25,15 +25,12 @@
 						"outputPath": "dist/demo-angular",
 						"index": "src/index.html",
 						"browser": "src/main.ts",
-						"polyfills": ["zone.js"],
+
+						// provideExperimentalZonelessChangeDetection of angular 18
+						// "polyfills": ["zone.js"],
 						"tsConfig": "tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
-						"assets": [
-							{
-								"glob": "**/*",
-								"input": "public"
-							}
-						],
+						"assets": ["src/assets"],
 						"styles": ["src/styles.scss"],
 						"scripts": [],
 						"server": "src/main.server.ts",
@@ -84,15 +81,11 @@
 				"test": {
 					"builder": "@angular-devkit/build-angular:karma",
 					"options": {
-						"polyfills": ["zone.js", "zone.js/testing"],
+						// provideExperimentalZonelessChangeDetection of angular 18
+						// "polyfills": ["zone.js", "zone.js/testing"],
 						"tsConfig": "tsconfig.spec.json",
 						"inlineStyleLanguage": "scss",
-						"assets": [
-							{
-								"glob": "**/*",
-								"input": "public"
-							}
-						],
+						"assets": ["src/assets"],
 						"styles": ["src/styles.scss"],
 						"scripts": []
 					}

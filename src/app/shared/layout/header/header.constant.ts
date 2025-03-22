@@ -5,36 +5,6 @@ export const HEADER_ITEMS = [
 		link: '/',
 	},
 	{
-		label: 'Angular 17',
-		items: [
-			{
-				label: 'Introduce',
-				icon: 'pi pi-bolt',
-				link: '/17/',
-			},
-			{
-				label: 'Built-in Control Flow Syntax',
-				icon: 'pi pi-bolt',
-				link: '/17/built_in_control_flow_syntax',
-			},
-			{
-				label: 'Performance Enhancements ',
-				icon: 'pi pi-bolt',
-				link: '/17/performance_enhancements',
-			},
-			{
-				label: 'Deferrable Views for Optimized Loading',
-				icon: 'pi pi-bolt',
-				link: '/17/deferrable_views',
-			},
-			{
-				label: 'Enhanced Server-Side Rendering (SSR) Support',
-				icon: 'pi pi-bolt',
-				link: '/17/enhanced_server_side',
-			},
-		],
-	},
-	{
 		label: 'Angular 18',
 		items: [
 			{
@@ -48,19 +18,9 @@ export const HEADER_ITEMS = [
 				link: '/18/zoneless_change_detection',
 			},
 			{
-				label: 'Stable Material 3 Components',
-				icon: 'pi pi-bolt',
-				link: '/18/stable_material_component',
-			},
-			{
 				label: 'Deferrable Views and Built-in Control Flow',
 				icon: 'pi pi-bolt',
 				link: '/18/deferrable_views_and_built_in_control_flow',
-			},
-			{
-				label: 'Introduction of &#64;let Syntax',
-				icon: 'pi pi-bolt',
-				link: '/18/let_syntax',
 			},
 		],
 	},
@@ -88,54 +48,14 @@ export const HEADER_ITEMS = [
 				link: '/19/event_replay_enabled_by_default',
 			},
 			{
-				label: 'Event Replay Enabled by Default',
+				label: 'Route-level render modes',
 				icon: 'pi pi-bolt',
-				link: '/18/event_replay_enabled_by_default',
+				link: '/19/route_level_render_modes',
 			},
 			{
-				label: 'Standalone Components by Default',
+				label: 'Stabilization of Core Reactivity Primitives',
 				icon: 'pi pi-bolt',
-				link: '/18/standalone_components_by_default',
-			},
-		],
-	},
-	{
-		label: 'Projects',
-		icon: 'pi pi-search',
-		items: [
-			{
-				label: 'Core',
-				icon: 'pi pi-bolt',
-				shortcut: '⌘+S',
-			},
-			{
-				label: 'Blocks',
-				icon: 'pi pi-server',
-				shortcut: '⌘+B',
-			},
-			{
-				label: 'UI Kit',
-				icon: 'pi pi-pencil',
-				shortcut: '⌘+U',
-			},
-			{
-				separator: true,
-			},
-			{
-				label: 'Templates',
-				icon: 'pi pi-palette',
-				items: [
-					{
-						label: 'Apollo',
-						icon: 'pi pi-palette',
-						badge: '2',
-					},
-					{
-						label: 'Ultima',
-						icon: 'pi pi-palette',
-						badge: '3',
-					},
-				],
+				link: '/19/stabilization_of_core_reactivity_primitives',
 			},
 		],
 	},

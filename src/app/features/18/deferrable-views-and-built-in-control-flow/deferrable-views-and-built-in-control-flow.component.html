@@ -1,1 +1,61 @@
-<p>deferrable-views-and-built-in-control-flow works!</p>
+<p-fieldset legend="Deferrable Views and Built-in Control Flow">
+	<p>
+		- <b>Angular 17</b> đã giới thiệu deferrable views and the new built-in control flow syntax.
+	</p>
+	<p>
+		- <b>Angular 18</b> graduates deferrable views and the new built-in control flow syntax to
+		stable status.
+	</p>
+	<p>
+		- Về cơ bản, Deferrable views help <b>optimize our initial bundle size</b> và
+		<b>cải thiện initial load</b>
+		của application bằng cách cho phép bạn lazy load templates của mình cho đến khi cần dùng sau
+		này. ví dụ: cần phải lazy load 1 component bự ở phía dưới màn hình và muốn tải nó ngay khi vào
+		viewport.
+	</p>
+	<p>
+		- Điều này có nghĩa là component code sẽ nằm trong một bundle riêng được loaded vào thời điểm
+		thuận tiện cho app.
+	</p>
+	<p>
+		-The built-in control flow syntax (&#64;if, &#64;for) cung cấp một cách trực quan và hiệu quả
+		hơn để handle conditional rendering and loops in templates.
+	</p>
+</p-fieldset>
+<div #greeting>Hello!</div>
+
+@defer (on viewport(greeting)) {
+<app-deferrable-views-example-defer></app-deferrable-views-example-defer>
+} @placeholder {
+<p>Future comments</p>
+} @loading (minimum 2s) {
+<p>Loading comments...</p>
+}
+
+<br />
+
+@if (user) {
+<h1>Welcome, {{ user.name }}!</h1>
+} @else {
+<h1>Welcome, guest!</h1>
+}
+
+<br />
+@for (item of items; track item.id) {
+<div>{{ item.name }}</div>
+}@empty {
+<li>There are no items.</li>
+}
+
+<p-fieldset legend="Introduction of @let Syntax">
+	<p>
+		- Angular 18.1 giới thiệu &#64;let syntax, cho phép developers define và sử dụng local
+		variables trực tiếp trong templates.
+	</p>
+	<p>
+		- feature này đơn giản hóa các mẫu bằng cách giảm các biểu thức lặp lại và tăng khả năng đọc.
+	</p>
+</p-fieldset>
+
+@let total = items.length;
+<p>Total items: {{ total }}</p>

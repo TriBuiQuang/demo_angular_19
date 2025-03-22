@@ -1,15 +1,21 @@
 @import "assets/scss/index.scss";
 
+$height__header: 58.5px;
+$padding-top__contain: 10px;
+$height__footer: 50px;
+
 ::ng-deep * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	font-size: 18px;
 }
 
 div.container {
 	display: flex;
 	flex-direction: column;
-	padding: 10px 20px;
+	padding: 10px 50px;
+	min-height: calc(100vh - $height__header - $padding-top__contain - $height__footer);
 }
 
 :host ::ng-deep {
@@ -21,20 +27,39 @@ div.container {
 			padding-left: 30px;
 			padding-right: 30px;
 		}
-		p-fieldset {
-			padding: 10px;
-			margin-left: 10px;
-			.p-fieldset-legend {
-				background-color: $purple-400;
-			}
-			.p-fieldset {
-				margin: 0 40px;
-			}
-		}
 
 		.title-theme__h2 {
 			font-size: 40px;
 			color: $red;
+		}
+	}
+	p {
+		color: #a8a8a8;
+		line-height: 28px;
+		b {
+			color: white;
+		}
+	}
+	p-fieldset {
+		padding: 10px;
+		margin-left: 10px;
+		.p-fieldset-legend {
+			background-color: $purple-400;
+		}
+		.p-fieldset {
+			margin: 0 40px;
+		}
+		.p-fieldset-content {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+	.example__img {
+		justify-self: center;
+		img {
+			width: 100%;
 		}
 	}
 }

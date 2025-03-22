@@ -3,10 +3,13 @@
 footer {
 	// background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 	background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(2, 0, 36, 1) 100%);
-	position: fixed;
+	position: sticky;
 	bottom: 0;
 	justify-items: center;
 	width: 100%;
-	min-height: 50px;
-	padding: 20px 10px;
+	min-height: 40px;
+	padding: 10px 10px;
+	p {
+		font-size: 14px;
+	}
 }

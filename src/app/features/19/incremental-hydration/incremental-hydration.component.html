@@ -1,1 +1,122 @@
-<p>incremental-hydration works!</p>
+<p-fieldset legend="Lịch sử Incremental Hydration:">
+	<p>
+		- <b>Full Application Hydration:</b> Điều này đảm bảo HTML được render phía server sẽ được tái
+		sử dụng khi app bootstrap(khởi động) ở phía client
+	</p>
+	<p>- <b>Defer:</b> Để trì hoãn việc tải chunks của app</p>
+	<p>
+		- <b>eventReplay:</b> Để đảm bảo không có tương tác nào của user bị mất khi hydration kết thúc
+	</p>
+	<div class="example__img">
+		<img [src]="imgSrcHistory" alt="Evolving change detection" />
+		<br clear="all" />
+	</div>
+</p-fieldset>
+
+<p-fieldset legend="Incremental hydration:">
+	<p>
+		- <b>Hydration là quá trình khôi phục ứng dụng được render phía server trên client</b>. Quá
+		trình này bao gồm việc <b>tái sử dụng</b> các cấu trúc DOM đã được render từ server,
+		<b>duy trì trạng thái của ứng dụng</b>, <b>chuyển dữ liệu ứng dụng(application data)</b> đã
+		được server lấy trước đó và các quy trình khác.
+	</p>
+	<br />
+	<p>
+		- <b>Incremental hydration</b> cho phép developers chỉ định <b>các phần của template</b> được
+		render phía server để tải và <b>hydrate lazily</b>, giúp cải thiện performance cho các complex
+		application
+	</p>
+
+	<br />
+
+	<p>
+		- Hydration <b>cải thiện</b> application performance bằng cách <b>tránh</b> công việc dư thừa
+		khi <b>tạo lại các node DOM</b>. Thay vì làm điều đó, Angular cố gắng khớp DOM elements (các
+		phần tử) hiện có với cấu trúc của ứng dụng trong quá trình chạy và tái sử dụng các node DOM
+		khi có thể.
+	</p>
+	<p>
+		==> Điều này giúp cải thiện performance, có thể đo lường bằng các chỉ số Core Web Vitals
+		(CWV), như giảm First Input Delay (FID), Largest Contentful Paint (LCP) và Cumulative Layout
+		Shift (CLS). Việc cải thiện các chỉ số này cũng ảnh hưởng đến SEO performance.
+	</p>
+
+	<br />
+
+	<p>
+		- Nếu <b>không bật hydration</b>, các ứng dụng Angular render phía server sẽ hủy và render lại
+		toàn bộ DOM của ứng dụng, có thể <b>gây hiện tượng nhấp nháy giao diện</b> (UI flicker) người
+		dùng. Việc re-render này có thể ảnh hưởng tiêu cực đến các chỉ số Core Web Vitals, như LCP và
+		gây thay đổi bố cục (layout shift).
+	</p>
+	<p>
+		- <b>Bật hydration</b> cho phép tái sử dụng DOM hiện có và
+		<b>ngăn chặn hiện tượng nhấp nháy này(flicker)</b>.
+	</p>
+</p-fieldset>
+
+<p-fieldset legend="Hydration cách hoạt động:">
+	<div class="example__img" style="width: 100%">
+		<img [src]="imgSrcHowWork" alt="Evolving change detection" />
+		<br clear="all" />
+	</div>
+</p-fieldset>
+
+<p-fieldset legend="Pros:">
+	<p>
+		1. 🚀 <b>Faster Time to Interactive (TTI):</b> Ứng dụng vẫn phản hồi trong khi quá trình cung
+		cấp nước đang diễn ra.
+	</p>
+
+	<p>
+		2. 📉 <b>Reduces Main Thread Blocking:</b>
+		Không giống như quá trình full hydration, nó ngăn ngừa tình trạng đóng băng UI bằng cách kích
+		hoạt components một cách dần dần.
+	</p>
+	<p>
+		3. ⚡ <b>Improves Performance on Large Apps:</b>
+		Đặc biệt hữu ích khi sử dụng lazy loading, vì quá trình hydration được giới hạn trong các
+		modules đã tải.
+	</p>
+	<p>
+		4. 🌍 <b>Great for SEO & Web Core Vitals:</b> Helps with Largest Contentful Paint (LCP) and
+		First Input Delay (FID).
+	</p>
+	<p>
+		5.📡 <b>Bandwidth-Efficient:</b>
+		Chỉ load JavaScript cần thiết khi người dùng tương tác với các phần cụ thể.
+	</p>
+</p-fieldset>
+
+<p-fieldset legend="Cons:">
+	<p>
+		1. 🚀 <b>More Complex Debugging:</b> Vì quá trình hydration diễn ra asynchronously nên việc
+		debugging các vấn đề liên quan đến hydration có thể rất khó khăn(tricky).
+	</p>
+
+	<p>
+		2. 📉 <b>Initial Flash of Static Content:</b>
+
+		Một số phần có thể có vẻ tương tác nhưng vẫn không hoạt động cho đến khi quá trình hydration
+		hoàn tất.
+	</p>
+	<p>
+		3. ⚡ <b>Requires Smart Resource Management:</b> Nếu không được tối ưu hóa, việc lập lịch
+		trình hydration có thể dẫn đến sự delays không mong muốn trong việc khiến components tương tác
+		với nhau.
+	</p>
+	<p>
+		4. 🌍 <b>Potential for Partial Failures:</b>
+		Nếu quá trình hydration không thành công cho một phần của trang, điều này có thể dẫn đến tình
+		trạng UI elements ở các phần riêng biệt (isolated sections) không phản hồi.
+	</p>
+</p-fieldset>
+
+<p-fieldset legend="When to use:">
+	<p>✅ Large-scale Angular SSR apps with multiple lazy-loaded modules</p>
+	<p>✅ Applications where SEO and performance (e.g., Web Core Vitals) matter</p>
+	<p>✅ Sites with complex UIs that need better TTI and responsiveness</p>
+	<hr />
+	<p>❌ Small Angular apps that hydrate quickly in a single pass</p>
+	<p>❌ Fully static SSR applications without interactive client-side logic</p>
+</p-fieldset>

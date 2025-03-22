@@ -1,12 +1,67 @@
-<p>
-	Experimental Zoneless Change Detection: Angular historically relied on
-	zone.js for change detection, which had certain performance drawbacks. In
-	Angular 18, experimental support for zoneless change detection was
-	introduced. This allows developers to remove zone.js from their projects,
-	potentially leading to faster initial renders, improved runtime performance,
-	smaller bundle sizes, and more straightforward debugging. To enable this, add
-	provideExperimentalZonelessChangeDetection to your application bootstrap and
-	remove zone.js from your polyfills. BLOG.ANGULAR.DEV
-</p>
+<p-fieldset legend="Experimental Zoneless Change Detection:">
+	<p>
+		- Angular trong lịch sử dựa vào zone.js để phát hiện thay đổi, điều này có những nhược điểm
+		nhất định về performance.
+	</p>
+	<p>
+		- Trong Angular 18, experimental support for zoneless change detection đã được giới thiệu.
+		Điều này cho phép developers xóa zone.js khỏi các dự án của họ, có khả năng dẫn đến initial
+		renders nhanh hơn, cải thiện runtime performance, smaller bundle sizes và more straightforward
+		debugging.
+	</p>
+</p-fieldset>
 
-<pre [textContent]="codeZoneLess"></pre>
+<div class="example__img">
+	<img [src]="imgSrc" alt="Evolving change detection" />
+	<br clear="all" />
+
+	After adding the provider, remove <b style="background-color: #3e3c3c">`zone.js`</b> from your
+	polyfills in angular.json.
+</div>
+
+<br />
+
+<p-fieldset legend="Zoneless mở ra nhiều cơ hội developers:">
+	<p>
+		- Improve khả năng kết hợp với micro-frontends and khả năng tương tác với các frameworks khác.
+	</p>
+	<p>- Faster initial render and runtime.</p>
+	<p>- Smaller bundle size and faster page loads.</p>
+	<p>- More readable stack traces.</p>
+	<p>- Simpler debugging.</p>
+</p-fieldset>
+
+<div>
+	<h3>Ngoài ra:</h3>
+	<p>
+		- Angular đã trải qua một sự phát triển thú vị gần đây và zoneless là một phần cốt lõi của nó
+	</p>
+	<p>
+		- Nếu component compatible với ChangeDetectionStrategy.OnPush của Angular, chúng hầu như cũng
+		sẽ compatible với zoneless
+	</p>
+	<p>
+		- Zone.js không có native async/await, nên cần downlevel nó xuống thành promises thông qua
+		Angular CLI. Điều này không tối ưu vì tất cả các trình duyệt hiện đại đều hỗ trợ async/await
+		dễ đọc hơn promises và optimized bởi JavaScript runtime
+	</p>
+	<p>
+		- Với experimental zoneless change detection Angular CLI, sẽ dũng native async/await mà không
+		cần downlevel xuống promises. Điều này dẫn đến improve debugging và bundles nhỏ hơn
+	</p>
+</div>
+
+<br />
+<div class="example__img">
+	<img [src]="imgWithPolyfillsSrc" alt="Evolving change detection" />
+	<br clear="all" />
+
+	Hình trên là còn zone.js
+</div>
+<br />
+<div class="example__img">
+	<img [src]="imgWithOutPolyfillsSrc" alt="Evolving change detection" />
+	<br clear="all" />
+
+	hình trên là sau khi xoá zone.js
+</div>

@@ -1,0 +1,96 @@
+<p-fieldset legend="Stabilization of Core Reactivity Primitives:">
+	<p>
+		- Core reactivity primitives, chẳng hạn như signal-based inputs, outputs, and queries đã được
+		ổn định, cung cấp một reactivity model hiệu quả và có thể dự đoán được hơn.
+	</p>
+
+	<hr />
+	<p>- Một chủ đề cốt lõi của Angular trong hai năm qua là phát triển reactivity system</p>
+	<p>
+		- Trong version 19, chia sẻ một số API bổ sung mới là <u>linkedSignal</u> and <u>resource</u>
+	</p>
+	<p>
+		- Và việc ổn định một số API phản ứng cơ bản mà chúng tôi đã giới thiệu trong các phiên bản
+		trước như là such as input, output, and view queries.
+	</p>
+
+	<p>- Example input:</p>
+	<div class="example__img">
+		<img [src]="imgSrcInputExample" alt="Reactivity Primitives Input" />
+		<br clear="all" />
+	</div>
+	<br />
+	<hr />
+	<br />
+	<p>- Example output:</p>
+	<div class="example__img">
+		<img [src]="imgSrcOutputExample" alt="Reactivity Primitives Output" />
+		<br clear="all" />
+	</div>
+
+	<br />
+	<hr />
+
+	<p>- Example view queries:</p>
+	<p>- Child Component(child.component.ts):</p>
+	<div class="example__img">
+		<img [src]="imgSrcViewChildChildExample" alt="Reactivity Primitives view child" />
+		<br clear="all" />
+	</div>
+
+	<p>- Parent Component(parent.component.ts):</p>
+	<div class="example__img">
+		<img [src]="imgSrcViewChildParentExample" alt="Reactivity Primitives view child" />
+		<br clear="all" />
+	</div>
+</p-fieldset>
+
+<p-fieldset legend="linked signals:">
+	<p>
+		- Trong UI, thường cần có state có thể thay đổi nhưng vẫn theo dõi được một số state cấp cao
+		hơn.
+	</p>
+	<p>
+		- The new linkedSignal primitive creates a writable signal which captures this type of
+		dependency:
+	</p>
+	<div class="example__img">
+		<img [src]="imgSrcLinkedSignalExample" alt="Reactivity Primitives view child" />
+		<br clear="all" />
+	</div>
+</p-fieldset>
+
+<p-fieldset legend="Resource:">
+	<p>
+		- Cho đến nay, signals trong Angular tập trung vào synchronous data: lưu trữ trạng
+		thái(storing state) trong signals, computed values, inputs, queries, etc
+	</p>
+	<p>
+		- Trong Angular v19, đang thực hiện những bước đầu tiên hướng tới việc tích hợp signals với
+		các hoạt động asynchronous bằng cách giới thiệu một <u>resource()</u> thử nghiệm mới
+	</p>
+
+	<hr />
+
+	<p>- Resource có 3 phần:</p>
+	<p>
+		1. Một request function, thể hiện yêu cầu chính xác cần thực hiện theo signals. Ví dụ, một
+		<u>user</u> resource có thể tính toán một request phụ thuộc vào tham số user ID trong route
+		hiện tại.
+	</p>
+
+	<p>
+		2. Loader, thực hiện thao tác asynchronous khi yêu cầu thay đổi và cuối cùng trả về giá trị
+		mới.
+	</p>
+
+	<p>
+		3. <u>Resource</u> instance nhận được sẽ cung cấp các signals để truyền tải cả giá trị (khi có
+		sẵn) cũng như trạng thái hiện tại của resource (đang tải, đã hoàn thành, gặp lỗi, v.v.)."
+	</p>
+
+	<div class="example__img">
+		<img [src]="imgSrcLinkedSignalExample" alt="Reactivity Primitives view child" />
+		<br clear="all" />
+	</div>
+</p-fieldset>

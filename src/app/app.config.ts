@@ -1,4 +1,8 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import {
+	ApplicationConfig,
+	provideExperimentalZonelessChangeDetection,
+	provideZoneChangeDetection,
+} from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
@@ -9,11 +13,12 @@ import { provideClientHydration, withEventReplay, withIncrementalHydration } fro
 
 export const appConfig: ApplicationConfig = {
 	providers: [
-		provideZoneChangeDetection({ eventCoalescing: true }),
+		// provideZoneChangeDetection({ eventCoalescing: true }),
+		provideExperimentalZonelessChangeDetection(),
 		provideRouter(routes),
 		// this will enable Incremental Hydration
 		// provideClientHydration(withIncrementalHydration()), // 🔥 Kích hoạt Hydration từng phần
-		provideClientHydration(withEventReplay()), // 🔥 Kích hoạt Hydration giữ lại sự kiện
+		// provideClientHydration(withEventReplay()), // 🔥 Kích hoạt Hydration giữ lại sự kiện
 		provideAnimationsAsync(),
 		providePrimeNG({
 			theme: {

@@ -6,44 +6,6 @@ export const routes: Routes = [
 		loadComponent: () => import('./features/home/home.component').then((m) => m.HomeComponent),
 	},
 	{
-		path: '17',
-		children: [
-			{
-				path: '',
-				loadComponent: () =>
-					import('./features/17/introduce/introduce.component').then((m) => m.IntroduceComponent),
-			},
-			{
-				path: 'built_in_control_flow_syntax',
-				loadComponent: () =>
-					import('./features/17/built-in-control-flow-syntax/built-in-control-flow-syntax.component').then(
-						(m) => m.BuiltInControlFlowSyntaxComponent
-					),
-			},
-			{
-				path: 'deferrable_views',
-				loadComponent: () =>
-					import('./features/17/deferrable-views/deferrable-views.component').then(
-						(m) => m.DeferrableViewsComponent
-					),
-			},
-			{
-				path: 'enhanced_server_side',
-				loadComponent: () =>
-					import(
-						'./features/17/enhanced-server-side-rendering-support/enhanced-server-side-rendering-support.component'
-					).then((m) => m.EnhancedServerSideRenderingSupportComponent),
-			},
-			{
-				path: 'performance_enhancements',
-				loadComponent: () =>
-					import('./features/17/performance-enhancements/performance-enhancements.component').then(
-						(m) => m.PerformanceEnhancementsComponent
-					),
-			},
-		],
-	},
-	{
 		path: '18',
 		children: [
 			{
@@ -65,18 +27,6 @@ export const routes: Routes = [
 						'./features/18/deferrable-views-and-built-in-control-flow/deferrable-views-and-built-in-control-flow.component'
 					).then((m) => m.DeferrableViewsAndBuiltInControlFlowComponent),
 			},
-			{
-				path: 'let_syntax',
-				loadComponent: () =>
-					import('./features/18/let-syntax/let-syntax.component').then((m) => m.LetSyntaxComponent),
-			},
-			{
-				path: 'stable_material_component',
-				loadComponent: () =>
-					import('./features/18/stable-material-component/stable-material-component.component').then(
-						(m) => m.StableMaterialComponentComponent
-					),
-			},
 		],
 	},
 	{
@@ -92,6 +42,34 @@ export const routes: Routes = [
 				loadComponent: () =>
 					import('./features/19/incremental-hydration/incremental-hydration.component').then(
 						(m) => m.IncrementalHydrationComponent
+					),
+			},
+			{
+				path: 'standalone_components_by_default',
+				loadComponent: () =>
+					import('./features/19/standalone-default/standalone-default.component').then(
+						(m) => m.StandaloneDefaultComponent
+					),
+			},
+			{
+				path: 'event_replay_enabled_by_default',
+				loadComponent: () =>
+					import('./features/19/event-replay-enabled-by-default/event-replay-enabled-by-default.component').then(
+						(m) => m.EventReplayEnabledByDefaultComponent
+					),
+			},
+			{
+				path: 'route_level_render_modes',
+				loadComponent: () =>
+					import('./features/19/route-level-render-modes/route-level-render-modes.component').then(
+						(m) => m.RouteLevelRenderModesComponent
+					),
+			},
+			{
+				path: 'stabilization_of_core_reactivity_primitives',
+				loadComponent: () =>
+					import('./features/19/core-reactivity-primitives/core-reactivity-primitives.component').then(
+						(m) => m.CoreReactivityPrimitivesComponent
 					),
 			},
 		],

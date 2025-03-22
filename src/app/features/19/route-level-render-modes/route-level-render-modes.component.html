@@ -1,0 +1,16 @@
+<p-fieldset legend="Route-level render mode:">
+	<p>
+		- Khi enable server-side rendering trong ứng dụng của mình, theo mặc định Angular sẽ
+		server-side render tất cả parametrized routes trong ứng dụng và prerender tất cả routes
+		without parameters.
+	</p>
+	<p>
+		- Trong v19, Angular cung cấp một interface mới có tên là <b>ServerRoute</b> cho phép cấu hình
+		từng routes có nên được hiển thị ở server-side hay không, render trước hay render ở client
+		side:
+	</p>
+	<div class="example__img">
+		<img [src]="imgSrcConfig" alt="Route level render modes config" />
+		<br clear="all" />
+	</div>
+</p-fieldset>

@@ -1,0 +1,69 @@
+<p-fieldset legend="Các vấn đề của server-side rendered app:">
+	<p>
+		- là khoảng cách xảy ra giữa sự kiện của người dùng và trình duyệt tải xuống và thực thi mã
+		chịu trách nhiệm xử lý sự kiện (vấn đề này trong dc đề cập trong incremental hydration)
+	</p>
+	<p>- <b>Defer:</b> Để trì hoãn việc tải chunks của app</p>
+	<p>
+		- <b>eventReplay:</b> Để đảm bảo không có tương tác nào của user bị mất khi hydration kết thúc
+	</p>
+	<p>- Ví dụ ta có</p>
+	<div class="example__img">
+		<img [src]="imgIssueTree" alt="Event Replay tree issue" />
+		<br clear="all" />
+	</div>
+	<div class="example__img">
+		<img [src]="imgIssueCodeButton" alt="Event Replay tree code example" />
+		<br clear="all" />
+	</div>
+	<p>
+		- Thông thường, onSave() method sẽ chỉ được gọi khi ứng dụng của bạn đã hoàn tất quá trình
+		hydration
+	</p>
+	<p>- Nếu Event Dispatch được bật, JSAction sẽ lắng nghe ở gốc của ứng dụng.</p>
+	<p>
+		- Library sẽ ghi lại các sự kiện diễn ra tại gốc rễ và phát lại chúng sau khi quá trình
+		hydration hoàn tất.
+	</p>
+	<div class="example__img">
+		<img [src]="imgIssueTreeAfterClick" alt="Event Replay tree after click" />
+		<br clear="all" />
+	</div>
+	<p>
+		- Theo cách này, các ứng dụng Angular sẽ ngừng loại bỏ events trước khi quá trình hydration
+		hoàn tất và cho phép người dùng tương tác với trang ngay sau khi trang tải xong
+	</p>
+	<p>- Angular will use JSAction under the hood</p>
+	<div class="example__img">
+		<img [src]="imgIssueWhenDeActive" alt="Event Replay example" />
+		<br clear="all" />
+	</div>
+</p-fieldset>
+
+<p-fieldset legend="Event replay is enabled by default:">
+	<p>
+		- Event dispatch ghi lại các event trong quá trình initial page load và phát lại chúng khi
+		code chịu trách nhiệm xử lý các sự kiện khả dụng
+	</p>
+	<hr />
+	<p>
+		- JSAction là một lib ủy nhiệm sự kiện nhỏ, low-level, tách biệt việc đăng ký trình lắng nghe
+		sự kiện khỏi mã JavaScript cho chính trình lắng nghe.
+	</p>
+	<p>
+		- Điều này cho phép ghi lại các tương tác của người dùng trước khi ứng dụng được khởi động
+		hoặc được cung cấp nước cũng như tải chậm rất chi tiết mã xử lý sự kiện. Nó thường được sử
+		dụng như một thành phần phụ của một khuôn khổ lớn hơn, thay vì là một thư viện độc lập.
+	</p>
+	<p>
+		- Event dispatch là lib tương tự mà nhóm Wiz đã phát triển cho Google Search và đã được hàng
+		tỷ người dùng thử nghiệm trong mười năm qua.
+	</p>
+
+	<p>- Config trong app config</p>
+
+	<div class="example__img">
+		<img [src]="imgConfig" alt="event replay hydration" />
+		<br clear="all" />
+	</div>
+</p-fieldset>

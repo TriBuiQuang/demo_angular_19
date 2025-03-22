@@ -1,0 +1,24 @@
+<p-fieldset legend="Standalone defaults to true:">
+	<p>- Được giới thiệu ở version 14</p>
+	<p>- Có cuộc khảo sát được thực hiện bởi team Angular là có hơn 90% dev sử dụng standalone</p>
+	<hr />
+	<p>- Angular cung cấp một schematic sẽ chạy như một phần của <b>ng update</b></p>
+	<p>
+		- Sẽ tự động xóa thuộc tính <u>standalone</u> component metadata cho tất cả standalone
+		directives, components, and pipes
+	</p>
+	<p>- Và đặt <u>standalone</u> thành <u>false</u> cho tất cả các non-standalone trừu tượng</p>
+</p-fieldset>
+
+<p-fieldset legend="Strict standalone enforcement:">
+	<p>
+		- Để giúp áp dụng các API hiện đại trong dự án của mình, Angular cung cấp compiler flag sẽ đưa
+		ra lỗi nếu nó phát hiện ra component, directive, or a pipe không standalone.
+	</p>
+	<p>- Config trong <u>tsconfig.json</u>:</p>
+
+	<div class="example__img">
+		<img [src]="imgSrcStrictEnforcement" alt="Standalone strict enforcement" />
+		<br clear="all" />
+	</div>
+</p-fieldset>

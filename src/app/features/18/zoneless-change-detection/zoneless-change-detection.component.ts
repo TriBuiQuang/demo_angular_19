@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
+import { FieldsetModule } from 'primeng/fieldset';
 
 @Component({
 	selector: 'app-zoneless-change-detection',
-	imports: [],
+	imports: [FieldsetModule],
 	templateUrl: './zoneless-change-detection.component.html',
 	styleUrl: './zoneless-change-detection.component.scss',
 })
 export class ZonelessChangeDetectionComponent {
-	codeZoneLess = `
-	Example: typescript Copy Edit import { bootstrapApplication } from '@angular/platform-browser';
-	import { provideExperimentalZonelessChangeDetection } from '@angular/core'; import { AppComponent } from './app.component';
-
-	bootstrapApplication(AppComponent, {
-		providers: [provideExperimentalZonelessChangeDetection()],
-	});
-	`;
+	imgSrc = 'assets/img/zoneless_change_detection.png';
+	imgWithOutPolyfillsSrc = 'assets/img/without_polyfills.png';
+	imgWithPolyfillsSrc = 'assets/img/with_polyfills.png';
 }
