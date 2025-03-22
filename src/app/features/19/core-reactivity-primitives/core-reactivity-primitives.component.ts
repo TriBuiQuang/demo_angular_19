@@ -14,4 +14,5 @@ export class CoreReactivityPrimitivesComponent {
 	imgSrcViewChildParentExample = './assets/img/reactivity_viewchild_parent_component.png';
 
 	imgSrcLinkedSignalExample = './assets/img/reactivity_linked_signal.png';
+	imgSrcResourceExample = './assets/img/reactivity_resource.png';
 }
