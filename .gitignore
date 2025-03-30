@@ -41,3 +41,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+
+#power point reading
+~$Presentation2.pptx

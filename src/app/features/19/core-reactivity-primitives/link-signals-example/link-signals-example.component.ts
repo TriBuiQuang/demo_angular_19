@@ -12,7 +12,7 @@ import { ButtonModule } from 'primeng/button';
 	styleUrl: './link-signals-example.component.scss',
 })
 export class LinkSignalsExampleComponent {
-	options = input<string[]>([]);
+	readonly options = input<string[]>([]);
 
 	// why use linkedSignal
 	// selectedOption = computed(() => this.options().at(-1) || null);

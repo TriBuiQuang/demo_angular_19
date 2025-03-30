@@ -1,13 +1,18 @@
 <p-fieldset legend="Deferrable Views and Built-in Control Flow">
 	<p>
-		- <b>Angular 17</b> đã giới thiệu deferrable views and the new built-in control flow syntax.
+		-
+		<b>Angular 17</b>
+		đã giới thiệu deferrable views and the new built-in control flow syntax.
 	</p>
 	<p>
-		- <b>Angular 18</b> graduates deferrable views and the new built-in control flow syntax to
-		stable status.
+		-
+		<b>Angular 18</b>
+		graduates deferrable views and the new built-in control flow syntax to stable status.
 	</p>
 	<p>
-		- Về cơ bản, Deferrable views help <b>optimize our initial bundle size</b> và
+		- Về cơ bản, Deferrable views help
+		<b>optimize our initial bundle size</b>
+		và
 		<b>cải thiện initial load</b>
 		của application bằng cách cho phép bạn lazy load templates của mình cho đến khi cần dùng sau
 		này. ví dụ: cần phải lazy load 1 component bự ở phía dưới màn hình và muốn tải nó ngay khi vào
@@ -22,29 +27,32 @@
 		hơn để handle conditional rendering and loops in templates.
 	</p>
 </p-fieldset>
+
 <div #greeting>Hello!</div>
+<hr />
 
 @defer (on viewport(greeting)) {
-<app-deferrable-views-example-defer></app-deferrable-views-example-defer>
+	<app-deferrable-views-example-defer></app-deferrable-views-example-defer>
 } @placeholder {
-<p>Future comments</p>
-} @loading (minimum 2s) {
-<p>Loading comments...</p>
+	<p>Future comments</p>
+} @loading (minimum 5s) {
+	<p>Loading comments... (defer)</p>
 }
+<hr />
 
 <br />
 
 @if (user) {
-<h1>Welcome, {{ user.name }}!</h1>
+	<h1>Welcome, {{ user.name }}!</h1>
 } @else {
-<h1>Welcome, guest!</h1>
+	<h1>Welcome, guest!</h1>
 }
 
 <br />
 @for (item of items; track item.id) {
-<div>{{ item.name }}</div>
-}@empty {
-<li>There are no items.</li>
+	<div>{{ item.name }}</div>
+} @empty {
+	<li>There are no items.</li>
 }
 
 <p-fieldset legend="Introduction of @let Syntax">

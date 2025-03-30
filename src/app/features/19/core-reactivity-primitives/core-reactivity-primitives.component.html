@@ -32,7 +32,9 @@
 					- Một chủ đề cốt lõi của Angular trong hai năm qua là phát triển reactivity system
 				</p>
 				<p>
-					- Trong version 19, chia sẻ một số API bổ sung mới là <u>linkedSignal</u> and
+					- Trong version 19, chia sẻ một số API bổ sung mới là
+					<u>linkedSignal</u>
+					and
 					<u>resource</u>
 				</p>
 				<p>
@@ -93,8 +95,9 @@
 				</p>
 				<p>
 					- Trong Angular v19, đang thực hiện những bước đầu tiên hướng tới việc tích hợp
-					signals với các hoạt động asynchronous bằng cách giới thiệu một <u>resource()</u> thử
-					nghiệm mới
+					signals với các hoạt động asynchronous bằng cách giới thiệu một
+					<u>resource()</u>
+					thử nghiệm mới
 				</p>
 
 				<hr />
@@ -103,8 +106,9 @@
 				<p>
 					1. Một request function, thể hiện yêu cầu chính xác cần thực hiện theo signals. Ví
 					dụ, một
-					<u>user</u> resource có thể tính toán một request phụ thuộc vào tham số user ID trong
-					route hiện tại.
+					<u>user</u>
+					resource có thể tính toán một request phụ thuộc vào tham số user ID trong route hiện
+					tại.
 				</p>
 
 				<p>
@@ -113,9 +117,10 @@
 				</p>
 
 				<p>
-					3. <u>Resource</u> instance nhận được sẽ cung cấp các signals để truyền tải cả giá
-					trị (khi có sẵn) cũng như trạng thái hiện tại của resource (đang tải, đã hoàn thành,
-					gặp lỗi, v.v.)."
+					3.
+					<u>Resource</u>
+					instance nhận được sẽ cung cấp các signals để truyền tải cả giá trị (khi có sẵn) cũng
+					như trạng thái hiện tại của resource (đang tải, đã hoàn thành, gặp lỗi, v.v.)."
 				</p>
 
 				<div class="example__img">
@@ -143,10 +148,11 @@
 				/>
 			</fieldset>
 			@if (products.isLoading()) {
-			<!-- <mat-progress-bar mode="query" /> -->
-			<p>Loading...</p>
-			} @if (products.error()) {
-			<div class="error">{{ products.error() }}</div>
+				<!-- <mat-progress-bar mode="query" /> -->
+				<p>Loading...</p>
+			}
+			@if (products.error()) {
+				<div class="error">{{ products.error() }}</div>
 			}
 			<section class="actions">
 				<button (click)="products.reload()">Reload</button>
@@ -155,9 +161,9 @@
 			</section>
 			<ul>
 				@for (product of products.value(); track product._id) {
-				<li>{{ product.name }}</li>
+					<li>{{ product.name }}</li>
 				} @empty {
-				<li class="no-data">Nothing to show</li>
+					<li class="no-data">Nothing to show</li>
 				}
 			</ul>
 		</p-tabpanel>

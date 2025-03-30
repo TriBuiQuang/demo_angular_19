@@ -1,6 +1,8 @@
 <ul>
-	@for(option of options(); track $index) {
-	<li [class.selected]="isSelected(option)" (click)="selectedOption.set(option)">{{ option }}</li>
+	@for (option of options(); track $index) {
+		<li [class.selected]="isSelected(option)" (click)="selectedOption.set(option)">
+			{{ option }}
+		</li>
 	}
 	<span>Selected: {{ selectedOption() || "nothing" }}</span>
 </ul>
