@@ -1,0 +1,38 @@
+<p-fieldset legend="Define">
+	<p>
+		- Plug'n'Play (PnP) là một tính năng trong Yarn giúp loại bỏ sự cần thiết của thư mục
+		node_modules, giúp quản lý gói nhanh hơn và hiệu quả hơn
+	</p>
+</p-fieldset>
+
+<p-fieldset legend="PnP vs Traditional node_modules">
+	<p-table
+		[value]="dataPnPVSTraditionalNodeModules"
+		[paginator]="false"
+		responsiveLayout="scroll"
+		class="custom-table"
+	>
+		<ng-template pTemplate="header">
+			<tr>
+				@for (col of columnsPnPVSTraditionalNodeModules; track col) {
+					<th>{{ col }}</th>
+				}
+				<!-- <th *ngFor="let col of columns">{{ col }}</th> -->
+			</tr>
+		</ng-template>
+		<ng-template pTemplate="body" let-row>
+			<tr>
+				<td>{{ row.feature }}</td>
+				<td>{{ row.pnp }}</td>
+				<td>{{ row.nodeModules }}</td>
+			</tr>
+		</ng-template>
+	</p-table>
+
+	<p>
+		- Yarn PnP là một cách tiếp cận hiện đại, hiệu quả để quản lý sự phụ thuộc giúp cải thiện hiệu
+		suất và bảo mật.
+	</p>
+	<p>- Tuy nhiên, Nếu sử dụng các công cụ không hỗ trợ đầy đủ, có thể cần cấu hình bổ sung.</p>
+	<p>- Nếu muốn cài đặt nhanh hơn và quản lý gói tốt hơn, PnP là một lựa chọn tuyệt vời!</p>
+</p-fieldset>

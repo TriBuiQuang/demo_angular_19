@@ -17,7 +17,7 @@ export const routes: Routes = [
 				path: 'zoneless_change_detection',
 				loadComponent: () =>
 					import('./features/18/zoneless-change-detection/zoneless-change-detection.component').then(
-						(m) => m.ZonelessChangeDetectionComponent
+						(m) => m.ZonelessChangeDetectionComponent,
 					),
 			},
 			{
@@ -41,36 +41,53 @@ export const routes: Routes = [
 				path: 'incremental_hydration',
 				loadComponent: () =>
 					import('./features/19/incremental-hydration/incremental-hydration.component').then(
-						(m) => m.IncrementalHydrationComponent
+						(m) => m.IncrementalHydrationComponent,
 					),
 			},
 			{
 				path: 'standalone_components_by_default',
 				loadComponent: () =>
 					import('./features/19/standalone-default/standalone-default.component').then(
-						(m) => m.StandaloneDefaultComponent
+						(m) => m.StandaloneDefaultComponent,
 					),
 			},
 			{
 				path: 'event_replay_enabled_by_default',
 				loadComponent: () =>
 					import('./features/19/event-replay-enabled-by-default/event-replay-enabled-by-default.component').then(
-						(m) => m.EventReplayEnabledByDefaultComponent
+						(m) => m.EventReplayEnabledByDefaultComponent,
 					),
 			},
 			{
 				path: 'route_level_render_modes',
 				loadComponent: () =>
 					import('./features/19/route-level-render-modes/route-level-render-modes.component').then(
-						(m) => m.RouteLevelRenderModesComponent
+						(m) => m.RouteLevelRenderModesComponent,
 					),
 			},
 			{
 				path: 'stabilization_of_core_reactivity_primitives',
 				loadComponent: () =>
 					import('./features/19/core-reactivity-primitives/core-reactivity-primitives.component').then(
-						(m) => m.CoreReactivityPrimitivesComponent
+						(m) => m.CoreReactivityPrimitivesComponent,
 					),
+			},
+		],
+	},
+	{
+		path: 'other_things',
+		children: [
+			{
+				path: 'yarn_vs_npm',
+				loadComponent: () =>
+					import('./features/other-things/yarn-vs-npm/yarn-vs-npm.component').then((m) => m.YarnVSNPMComponent),
+			},
+			{
+				path: 'pnp_vs_traditional_node_modules',
+				loadComponent: () =>
+					import(
+						'./features/other-things/pnp-vs-traditional-node-modules/pnp-vs-traditional-node-modules.component'
+					).then((m) => m.PNPVSTraditionalNodeModulesComponent),
 			},
 		],
 	},

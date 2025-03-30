@@ -1,0 +1,32 @@
+<p-fieldset legend="Yarn VS NPM:">
+	<p-table [value]="data" [paginator]="false" responsiveLayout="scroll" class="custom-table">
+		<ng-template pTemplate="header">
+			<tr>
+				@for (col of columns; track col) {
+					<th>{{ col }}</th>
+				}
+				<!-- <th *ngFor="let col of columns">{{ col }}</th> -->
+			</tr>
+		</ng-template>
+		<ng-template pTemplate="body" let-row>
+			<tr>
+				<td>{{ row.feature }}</td>
+				<td>{{ row.yarn }}</td>
+				<td>{{ row.npm }}</td>
+			</tr>
+		</ng-template>
+	</p-table>
+
+	<p>
+		- Yarn Thường được coi là tốt hơn 20-30% về tốc độ, bảo mật và quản lý phụ thuộc, đặc biệt là
+		đối với các dự án lớn và monorepos.
+	</p>
+	<p>
+		- Tuy nhiên, NPM Đã được cải thiện đáng kể trong những năm qua (đặc biệt là với npm v7+),
+		khiến nó trở thành một đối thủ cạnh tranh mạnh mẽ.
+	</p>
+	<p>
+		- Nếu bạn đang làm việc trong các dự án nhỏ, NPM là đủ tốt, nhưng đối với hiệu suất và sự ổn
+		định, Yarn thường là lựa chọn tốt hơn
+	</p>
+</p-fieldset>
