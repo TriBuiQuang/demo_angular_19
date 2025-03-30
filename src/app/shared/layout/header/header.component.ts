@@ -21,6 +21,5 @@ export class HeaderComponent implements OnInit {
 
 	ngOnInit() {
 		this.items = HEADER_ITEMS;
-		console.log('this. in hdaer');
 	}
 }

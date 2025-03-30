@@ -8,7 +8,7 @@ $height__footer: 50px;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	font-size: 18px;
+	font-size: 24px;
 }
 
 div.container {
@@ -21,7 +21,7 @@ div.container {
 :host ::ng-deep {
 	.introduce {
 		p {
-			line-height: 20px;
+			line-height: 35px;
 			padding-top: 5px;
 			padding-bottom: 5px;
 			padding-left: 30px;
@@ -29,13 +29,14 @@ div.container {
 		}
 
 		.title-theme__h2 {
-			font-size: 40px;
+			font-size: 50px;
 			color: $red;
 		}
 	}
 	p {
 		color: #a8a8a8;
-		line-height: 28px;
+		line-height: 40px;
+		padding-bottom: 10px;
 		b {
 			color: white;
 		}

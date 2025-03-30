@@ -9,4 +9,6 @@ import { FieldsetModule } from 'primeng/fieldset';
 })
 export class StandaloneDefaultComponent {
 	imgSrcStrictEnforcement = './assets/img/standalone_strict_enforcement.png';
+	imgSrcStrictUnusedEnforcement = './assets/img/standalone_unused_import_config.png';
+	imgSrcStrictUnusedResult = './assets/img/standalone_unused_import_CLI_build.png';
 }
