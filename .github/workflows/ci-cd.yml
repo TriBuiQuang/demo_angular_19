@@ -9,8 +9,8 @@ on:
       - cron: "30 1 * * 4"
 
 permissions:
-  	contents: read
-  	security-events: write
+   contents: read
+   security-events: write
 
 jobs:
    build:
@@ -36,9 +36,8 @@ jobs:
       steps:
          - name: Checkout repository
            uses: actions/checkout@v4
-			  with:
-					# We must fetch at least the immediate parent to find the PR base branch.
-				  fetch-depth: 2
+           with:
+              fetch-depth: 2
 
          - name: Initialize CodeQL
            uses: github/codeql-action/init@v3
