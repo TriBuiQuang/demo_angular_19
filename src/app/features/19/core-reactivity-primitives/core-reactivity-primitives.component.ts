@@ -1,4 +1,4 @@
-import { Component, linkedSignal, resource, signal } from '@angular/core';
+import { Component, computed, linkedSignal, resource, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import axios from 'axios';
 
@@ -28,6 +28,7 @@ export class CoreReactivityPrimitivesComponent {
 
 	// Choice defaults to the first option, but can be changed.
 	choice = linkedSignal(() => this.options()[0]);
+	// choiceComputed = computed(() => this.options()[0]);
 	//#endregion Linked Signal
 
 	//#region Resource

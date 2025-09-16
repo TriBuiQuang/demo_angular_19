@@ -59,19 +59,19 @@ export const HEADER_ITEMS = [
 			},
 		],
 	},
-	{
-		label: 'Other things',
-		items: [
-			{
-				label: 'Yarn vs NPM',
-				icon: 'pi pi-bolt',
-				link: '/other_things/yarn_vs_npm',
-			},
-			{
-				label: 'PnP vs traditional node_modules',
-				icon: 'pi pi-bolt',
-				link: '/other_things/pnp_vs_traditional_node_modules',
-			},
-		],
-	},
+	// {
+	// 	label: 'Other things',
+	// 	items: [
+	// 		{
+	// 			label: 'Yarn vs NPM',
+	// 			icon: 'pi pi-bolt',
+	// 			link: '/other_things/yarn_vs_npm',
+	// 		},
+	// 		{
+	// 			label: 'PnP vs traditional node_modules',
+	// 			icon: 'pi pi-bolt',
+	// 			link: '/other_things/pnp_vs_traditional_node_modules',
+	// 		},
+	// 	],
+	// },
 ];
