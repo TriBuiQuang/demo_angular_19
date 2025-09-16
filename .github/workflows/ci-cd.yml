@@ -32,45 +32,21 @@ jobs:
            run: yarn build
 
    codeql-analysis:
+      needs: build_and_test
       runs-on: ubuntu-latest
       steps:
          - name: Checkout repository
            uses: actions/checkout@v4
            with:
-              fetch-depth: 2
+              fetch-depth: 2 # Required for CodeQL analysis
 
          - name: Initialize CodeQL
            uses: github/codeql-action/init@v3
            with:
               languages: javascript
-              config-file: .github/codeql-config.yml
 
-         - name: Setup Node.js
-           uses: actions/setup-node@v4
-           with:
-              node-version: "20"
-              cache: "yarn"
-
-         - name: Install dependencies
-           run: yarn install --frozen-lockfile
+         - name: Autobuild
+           uses: github/codeql-action/autobuild@v3
 
          - name: Perform CodeQL Analysis
            uses: github/codeql-action/analyze@v3
-
-   dependabot:
-      runs-on: ubuntu-latest
-      steps:
-         - name: Checkout repository
-           uses: actions/checkout@v4
-
-         - name: Setup Node.js
-           uses: actions/setup-node@v4
-           with:
-              node-version: "20"
-              cache: "yarn"
-
-         - name: Install dependencies
-           run: yarn install --frozen-lockfile
-
-         - name: Run build with yarn
-           run: yarn build
